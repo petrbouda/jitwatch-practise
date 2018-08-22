@@ -28,6 +28,16 @@ cd jitwatch
 mvn clean compile exec:java
 ```
 
+## Problem with printing Assembly
+
+```
+Could not load hsdis-amd64.dylib; library not loadable; PrintAssembly is disabled
+```
+
+- Download the library or use `lib/hsdis-amd64.dylib` for mac and then patch your JVM:
+`$JAVA_HOME/lib/hsdis-amd64.dylib`
+
+## Logging
 
 - New JVM Logging tags - `-Xlog:jit\*,compilation\*,codecache\*=trace`
 - All available tags - `java -Xlog:help`
@@ -69,13 +79,21 @@ java -classpath examples/target/classes \
     pbouda.jitwatch.examples.UncommonTrap
 ```
 
-Print an Assembly
+Print an Assembly for all classes
 ```bash
 java -classpath examples/target/classes \
     -XX:+UnlockDiagnosticVMOptions \
     -XX:-TieredCompilation \
     -XX:+PrintAssembly \
-    -XX:+PrintOptoAssembly \
+    pbouda.jitwatch.examples.UncommonTrap
+```
+
+Print an Assembly only for a particular class
+```bash
+java -classpath examples/target/classes \
+    -XX:+UnlockDiagnosticVMOptions \
+    -XX:-TieredCompilation \
+    -XX:CompileCommand=print,pbouda/jitwatch/examples/UncommonTrap.hotMethod \
     pbouda.jitwatch.examples.UncommonTrap
 ```
 
