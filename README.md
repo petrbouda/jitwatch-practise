@@ -4,14 +4,14 @@
 
 ```
 $ java -version
-openjdk version "10.0.2" 2018-07-17
-OpenJDK Runtime Environment 18.3 (build 10.0.2+13)
-OpenJDK 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+  java version "10.0.2" 2018-07-17
+  Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+  Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
 ```
 
 - JIT Compiler Thresholds
 ```
-java -XX:+PrintFlagsFinal -version | grep CompileThreshold
+java -XX:+PrintFlagsFinal -XX:-TieredCompilation -version | grep CompileThreshold
      intx CompileThreshold                         = 10000                                 {pd product} {default}
    double CompileThresholdScaling                  = 1.000000                                 {product} {default}
     uintx IncreaseFirstTierCompileThresholdAt      = 50                                       {product} {default}
@@ -28,6 +28,18 @@ cd jitwatch
 mvn clean compile exec:java
 ```
 
+
+- New JVM Logging tags - `-Xlog:jit\*,compilation\*,codecache\*=trace`
+- All available tags - `java -Xlog:help`
+
+```bash
+java -classpath examples/target/classes \
+    -XX:-TieredCompilation \
+    -XX:+UnlockDiagnosticVMOptions \
+    -Xlog:jit\*,compilation\*=trace \
+    pbouda.jitwatch.examples.UncommonTrap
+```
+
 Mandatory JVM flags for a running program:
 ```bash
 java -classpath examples/target/classes \
@@ -35,8 +47,38 @@ java -classpath examples/target/classes \
     -XX:+LogCompilation \
     -XX:+TraceClassLoading \
     -XX:+PrintAssembly \
-    pbouda.jitwatch.examples.HelloWorld
+    pbouda.jitwatch.examples.UncommonTrap
 ```
+
+Print a Compilation 
+```bash
+java -classpath examples/target/classes \
+    -XX:+UnlockDiagnosticVMOptions \
+    -XX:-TieredCompilation \
+    -XX:+PrintCompilation \
+    pbouda.jitwatch.examples.UncommonTrap
+```
+
+Print Compilation with a Compilation Time
+```bash
+java -classpath examples/target/classes \
+    -XX:+UnlockDiagnosticVMOptions \
+    -XX:-TieredCompilation \
+    -XX:+PrintAssembly \
+    -XX:+CITime \
+    pbouda.jitwatch.examples.UncommonTrap
+```
+
+Print an Assembly
+```bash
+java -classpath examples/target/classes \
+    -XX:+UnlockDiagnosticVMOptions \
+    -XX:-TieredCompilation \
+    -XX:+PrintAssembly \
+    -XX:+PrintOptoAssembly \
+    pbouda.jitwatch.examples.UncommonTrap
+```
+
 
 Additional possible options:
 ```bash
@@ -53,6 +95,7 @@ export nocompressedoops="-XX:-UseCompressedOops"
 ### TODO - Examples
 
 - Uncommon Trap
+- Optimization Locks
 - Null Sanity Check
 - Devirtualization (Megamorphic calls)
 - Loop Unrolling
@@ -65,3 +108,4 @@ export nocompressedoops="-XX:-UseCompressedOops"
 - On Stack Allocation
 - Runtime Checks Removal
 - Branch Predication
+- Dead Code Elimination
