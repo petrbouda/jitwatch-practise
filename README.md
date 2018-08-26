@@ -65,57 +65,9 @@ java -classpath examples/target/classes \
     pbouda.jitwatch.examples.UncommonTrap
     
 ```
-    -XX:-TieredCompilation -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation -XX:+TraceClassLoading -XX:+PrintAssembly
 
-Print a Compilation 
-```bash
-java -classpath examples/target/classes \
-    -XX:+UnlockDiagnosticVMOptions \
-    -XX:-TieredCompilation \
-    -XX:+PrintCompilation \
-    pbouda.jitwatch.examples.UncommonTrap
-```
-
-Print Compilation with a Compilation Time
-```bash
-java -classpath examples/target/classes \
-    -XX:+UnlockDiagnosticVMOptions \
-    -XX:-TieredCompilation \
-    -XX:+PrintAssembly \
-    -XX:+CITime \
-    pbouda.jitwatch.examples.UncommonTrap
-```
-
-Print an Assembly for all classes
-```bash
-java -classpath examples/target/classes \
-    -XX:+UnlockDiagnosticVMOptions \
-    -XX:-TieredCompilation \
-    -XX:+PrintAssembly \
-    pbouda.jitwatch.examples.UncommonTrap
-```
-
-Print an Assembly only for a particular class
-```bash
-java -classpath examples/target/classes \
-    -XX:+UnlockDiagnosticVMOptions \
-    -XX:-TieredCompilation \
-    -XX:CompileCommand=print,pbouda/jitwatch/examples/UncommonTrap.hotMethod \
-    pbouda.jitwatch.examples.UncommonTrap
-```
-
-
-Additional possible options:
-```bash
-# Disable tiered compilation (enabled by default on Java 8, optional on Java 7)
-export notiered="-XX:-TieredCompilation"
-
-# Enable tiered compilation
-export tiered="-XX:+TieredCompilation"
-
-# Disable compressed oops (makes assembly easier to read)
-export nocompressedoops="-XX:-UseCompressedOops"
-```
+- For measuring compilation time: `-XX:+CITime`
+- Print only a particular method: `-XX:CompileCommand=print,pbouda/jitwatch/examples/UncommonTrap.hotMethod`
 
 ### TODO - Examples
 
