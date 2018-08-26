@@ -60,4 +60,10 @@ true - 3661 ns
 false - 31968 ns
 ```
 
+- On the picture below, we can see that the code for the first branch was successfully compiled into native code
+
 ![Uncommon Trap](images/uncommontrap-1.png)
+
+- On this snapshot, the second branch is missing and we have generated `callq` instead as a code for the uncommon trap
+
+![Uncommon Trap](images/uncommontrap-2.png)
