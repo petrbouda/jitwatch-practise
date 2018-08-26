@@ -60,4 +60,5 @@ true - 3661 ns
 false - 31968 ns
 ```
 
-[Uncommon Trap](/images/uncommontrap-1.png)
+![Uncommon Trap]
+(/images/uncommontrap-1.png)
