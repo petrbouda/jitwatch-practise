@@ -57,12 +57,15 @@ java -classpath examples/target/classes \
 Mandatory JVM flags for a running program:
 ```bash
 java -classpath examples/target/classes \
+    -XX:-TieredCompilation \
     -XX:+UnlockDiagnosticVMOptions \
     -XX:+LogCompilation \
     -XX:+TraceClassLoading \
     -XX:+PrintAssembly \
     pbouda.jitwatch.examples.UncommonTrap
+    
 ```
+    -XX:-TieredCompilation -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation -XX:+TraceClassLoading -XX:+PrintAssembly
 
 Print a Compilation 
 ```bash
