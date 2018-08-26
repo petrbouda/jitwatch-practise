@@ -71,7 +71,6 @@ java -classpath examples/target/classes \
 
 ### TODO - Examples
 
-- Uncommon Trap
 - Optimization Locks
 - Null Sanity Check
 - Devirtualization (Megamorphic calls)
