@@ -1,14 +1,15 @@
 # Lock Elision
 
 - Useful technique to eliminate multiple lock that are confined 
-- It does not make sense to multiple times enter the same monitor
-- We have to use option `-XX:-EliminateLocks` to see difference in JITWatch
+- JIT Compiler can recognize using Escape Analysis that the lock never escape the method 
+and then it's not possible to use the same lock with two threads
+- https://www.ibm.com/developerworks/library/j-jtp10185/index.html
 
-- On the picture below, we disabled a lock elimination and we can see how JIT Compiler generated `monitorenter` 
-and `monitorexit` for one print invocation.
+- Before the compiler is able to recognize that, method must be inlined otherwise we can see virtual calls to invoke a method
 
-![Uncommon Trap](images/lockelision-1.png)
+![Lock Elision](images/lockelision-1.png)
 
-- Now we can see that JIT Compiler generated only one `monitorenter` and then all three invocation one after the other.
+- With disable option `-XX:-EliminateLocks` we can see this line for every inlined call, otherwise with 
+eliminate locks enabled, there is no mention about synchronization
 
-![Uncommon Trap](images/lockelision-2.png)
+![Lock Elision](images/lockelision-2.png)

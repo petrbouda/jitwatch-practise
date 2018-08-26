@@ -1,0 +1,1237 @@
+# {method} {0x000000011539f448} 'sync' '()Ljava/lang/String;' in 'pbouda/jitwatch/examples/LockElision'
+#           [sp+0x60]  (sp of caller)
+[Entry Point]
+0x00000001287e4880: mov %eax,-0x14000(%rsp)
+0x00000001287e4887: push %rbp
+0x00000001287e4888: sub $0x50,%rsp
+0x00000001287e488c: mov 0x80(%r15),%rax
+0x00000001287e4893: mov %rax,%r10
+0x00000001287e4896: add $0x20,%r10
+0x00000001287e489a: cmp 0x90(%r15),%r10
+0x00000001287e48a1: jae L002b  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e48a7: mov %r10,0x80(%r15)
+0x00000001287e48ae: prefetchw 0xc0(%r10)
+0x00000001287e48b6: mov $0xf8001bac,%r11d  ;   {metadata('java/lang/StringBuffer')}
+0x00000001287e48bc: movabs $0x0,%r10
+0x00000001287e48c6: lea (%r10,%r11,8),%r10
+0x00000001287e48ca: mov 0xb0(%r10),%r10
+0x00000001287e48d1: mov %r10,(%rax)
+0x00000001287e48d4: movl $0xf8001bac,0x8(%rax)  ;   {metadata('java/lang/StringBuffer')}
+0x00000001287e48db: mov %r12d,0xc(%rax)
+0x00000001287e48df: mov %r12,0x10(%rax)
+0x00000001287e48e3: mov %r12,0x18(%rax)  ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                         ; - pbouda.jitwatch.examples.LockElision::sync@0 (line 12)
+             L0000: mov %rax,0x28(%rsp)
+0x00000001287e48ec: mov 0x80(%r15),%rax
+0x00000001287e48f3: mov %rax,%r10
+0x00000001287e48f6: add $0x20,%r10
+0x00000001287e48fa: cmp 0x90(%r15),%r10
+0x00000001287e4901: jae L002a  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4907: mov %r10,0x80(%r15)
+0x00000001287e490e: prefetchw 0xc0(%r10)
+0x00000001287e4916: movq $0x1,(%rax)
+0x00000001287e491d: prefetchw 0x100(%r10)
+0x00000001287e4925: movl $0xf80000f2,0x8(%rax)  ;   {metadata({type array byte})}
+0x00000001287e492c: prefetchw 0x140(%r10)
+0x00000001287e4934: movl $0x10,0xc(%rax)
+0x00000001287e493b: prefetchw 0x180(%r10)
+0x00000001287e4943: mov %r12,0x10(%rax)
+0x00000001287e4947: mov %r12,0x18(%rax)  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                         ; - java.lang.AbstractStringBuilder::<init>@12 (line 83)
+                                         ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                         ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+             L0001: mov 0x28(%rsp),%r10
+0x00000001287e4950: mov %rax,%r8
+0x00000001287e4953: shr $0x3,%r8
+0x00000001287e4957: mov %r8d,0x30(%rsp)
+0x00000001287e495c: mov 0x28(%rsp),%r11
+0x00000001287e4961: mov %r8d,0x14(%r11)
+0x00000001287e4965: mov %rax,%r11
+0x00000001287e4968: xor %r10,%r11
+0x00000001287e496b: shr $0x14,%r11
+0x00000001287e496f: test %r11,%r11
+0x00000001287e4972: je L0002
+0x00000001287e4974: shr $0x9,%r10
+0x00000001287e4978: movabs $0x10a016000,%rdi
+0x00000001287e4982: add %r10,%rdi
+0x00000001287e4985: movsbl (%rdi),%r11d
+0x00000001287e4989: cmp $0x20,%r11d
+0x00000001287e498d: jne L0003
+0x00000001287e498f: xor %ebx,%ebx
+0x00000001287e4991: jmp L0006
+             L0002: xor %ebx,%ebx
+0x00000001287e4995: jmp L0006
+             L0003: mov 0x3e8(%r15),%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.String::<init>@6 (line 3041)
+                                          ; - java.lang.StringLatin1::newString@13 (line 549)
+                                          ; - java.lang.StringBuffer::toString@24 (line 678)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e499e: mov 0x3d8(%r15),%r11
+0x00000001287e49a5: lock addl $0x0,-0x40(%rsp)
+0x00000001287e49ab: movsbl (%rdi),%r8d
+0x00000001287e49af: test %r8d,%r8d
+0x00000001287e49b2: je L0005
+0x00000001287e49b4: mov %r12b,(%rdi)
+0x00000001287e49b7: test %r11,%r11
+0x00000001287e49ba: je L0004
+0x00000001287e49bc: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.AbstractStringBuilder::<init>@14 (line 83)
+                                                ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+0x00000001287e49c1: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e49c5: mov %r11,0x3d8(%r15)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::<init>@14 (line 83)
+                                          ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+0x00000001287e49cc: jmp L0005  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0004: mov %r15,%rsi
+0x00000001287e49d1: vzeroupper
+0x00000001287e49d4: movabs $0x10bcb5d68,%r10
+0x00000001287e49de: callq *%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::<init>@14 (line 83)
+                                 ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+             L0005: mov 0x28(%rsp),%r10
+0x00000001287e49e6: mov 0xc(%r10),%ebx  ;*getfield count {reexecute=0 rethrow=0 return_oop=0}
+                                        ; - java.lang.AbstractStringBuilder::append@16 (line 512)
+                                        ; - java.lang.StringBuffer::append@7 (line 275)
+                                        ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e49ea: mov 0x14(%r10),%r10d  ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@1 (line 144)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e49ee: mov %r10d,0x30(%rsp)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.String::<init>@6 (line 3041)
+                                          ; - java.lang.StringLatin1::newString@13 (line 549)
+                                          ; - java.lang.StringBuffer::toString@24 (line 678)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0006: movsbl 0x398(%r15),%r10d
+0x00000001287e49fb: mov 0x28(%rsp),%r11
+0x00000001287e4a00: mov %r12b,0x10(%r11)  ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+0x00000001287e4a04: test %r10d,%r10d
+0x00000001287e4a07: jne L0026
+             L0007: mov 0x28(%rsp),%r10
+0x00000001287e4a12: mov %r12d,0x18(%r10)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.StringBuffer::append@2 (line 274)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4a16: mov 0x30(%rsp),%r10d
+0x00000001287e4a1b: mov 0xc(%r12,%r10,8),%r11d  ; implicit exception: dispatches to 0x00000001287e542e
+0x00000001287e4a20: mov %ebx,%r10d
+0x00000001287e4a23: sub %r11d,%r10d
+0x00000001287e4a26: add $0x2,%r10d
+0x00000001287e4a2a: test %r10d,%r10d
+0x00000001287e4a2d: jg L0019  ;*return {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@38 (line 149)
+                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                              ; - java.lang.StringBuffer::append@7 (line 275)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+             L0008: mov 0x28(%rsp),%r10
+0x00000001287e4a38: movsbl 0x10(%r10),%ebp  ;*getfield coder {reexecute=0 rethrow=0 return_oop=0}
+                                            ; - java.lang.AbstractStringBuilder::getCoder@7 (line 1594)
+                                            ; - java.lang.AbstractStringBuilder::putStringAt@1 (line 1638)
+                                            ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                            ; - java.lang.StringBuffer::append@7 (line 275)
+                                            ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4a3d: mov 0xc(%r10),%ebx  ;*getfield count {reexecute=0 rethrow=0 return_oop=0}
+                                        ; - java.lang.AbstractStringBuilder::append@26 (line 513)
+                                        ; - java.lang.StringBuffer::append@7 (line 275)
+                                        ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4a41: test %ebp,%ebp
+0x00000001287e4a43: jne L003d  ;*if_icmpeq {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::putStringAt@8 (line 1638)
+                               ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4a49: mov 0x30(%rsp),%r10d
+0x00000001287e4a4e: mov 0xc(%r12,%r10,8),%r14d  ; implicit exception: dispatches to 0x00000001287e5442
+0x00000001287e4a53: test %ebx,%ebx
+0x00000001287e4a55: jl L0035
+0x00000001287e4a5b: mov %ebx,%r8d
+0x00000001287e4a5e: add $0x2,%r8d
+0x00000001287e4a62: cmp %r8d,%r14d
+0x00000001287e4a65: jb L0035
+0x00000001287e4a6b: shl $0x3,%r10
+0x00000001287e4a6f: movslq %ebx,%r11
+0x00000001287e4a72: test %ebx,%ebx
+0x00000001287e4a74: jg L0018
+0x00000001287e4a7a: movb $0x43,0x10(%r10,%r11,1)
+0x00000001287e4a80: movb $0x31,0x11(%r10,%r11,1)  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::getBytes@22 (line 2980)
+                                                  ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                                  ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                                  ; - java.lang.StringBuffer::append@7 (line 275)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+             L0009: mov 0x28(%rsp),%r10
+0x00000001287e4a8b: mov %r8d,0xc(%r10)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                        ; - java.lang.String::<init>@6 (line 3041)
+                                        ; - java.lang.StringLatin1::newString@13 (line 549)
+                                        ; - java.lang.StringBuffer::toString@24 (line 678)
+                                        ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4a8f: movsbl 0x398(%r15),%r11d
+0x00000001287e4a97: test %r11d,%r11d
+0x00000001287e4a9a: jne L0027
+             L000a: mov 0x28(%rsp),%r10
+0x00000001287e4aa5: mov %r12d,0x18(%r10)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.StringBuffer::append@2 (line 274)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4aa9: mov %ebp,%ecx
+0x00000001287e4aab: sar %cl,%r14d
+0x00000001287e4aae: mov %ebx,%r11d
+0x00000001287e4ab1: sub %r14d,%r11d
+0x00000001287e4ab4: add $0x4,%r11d
+0x00000001287e4ab8: test %r11d,%r11d
+0x00000001287e4abb: jg L001d  ;*ifle {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@14 (line 145)
+                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                              ; - java.lang.StringBuffer::append@7 (line 275)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ac1: xor %r8,%r8  ;*return {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@38 (line 149)
+                                 ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L000b: mov 0x28(%rsp),%r10
+0x00000001287e4ac9: movsbl 0x10(%r10),%r11d  ;*getfield coder {reexecute=0 rethrow=0 return_oop=0}
+                                             ; - java.lang.AbstractStringBuilder::getCoder@7 (line 1594)
+                                             ; - java.lang.AbstractStringBuilder::putStringAt@1 (line 1638)
+                                             ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                             ; - java.lang.StringBuffer::append@7 (line 275)
+                                             ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ace: mov 0xc(%r10),%ebp  ;*getfield count {reexecute=0 rethrow=0 return_oop=0}
+                                        ; - java.lang.AbstractStringBuilder::append@26 (line 513)
+                                        ; - java.lang.StringBuffer::append@7 (line 275)
+                                        ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ad2: test %r11d,%r11d
+0x00000001287e4ad5: jne L003e  ;*if_icmpeq {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::putStringAt@8 (line 1638)
+                               ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4adb: mov 0x30(%rsp),%r10d
+0x00000001287e4ae0: mov 0xc(%r12,%r10,8),%r11d  ; implicit exception: dispatches to 0x00000001287e545a
+0x00000001287e4ae5: test %ebp,%ebp
+0x00000001287e4ae7: jl L0036
+0x00000001287e4aed: mov %ebp,%r10d
+0x00000001287e4af0: add $0x2,%r10d
+0x00000001287e4af4: cmp %r10d,%r11d
+0x00000001287e4af7: jb L0036  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::getBytes@22 (line 2980)
+                              ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                              ; - java.lang.StringBuffer::append@7 (line 275)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4afd: mov 0x30(%rsp),%ecx
+0x00000001287e4b01: lea (%r12,%rcx,8),%rdi  ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                            ; - java.lang.AbstractStringBuilder::putStringAt@17 (line 1641)
+                                            ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                            ; - java.lang.StringBuffer::append@7 (line 275)
+                                            ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4b05: movslq %ebp,%r9
+0x00000001287e4b08: test %ebp,%ebp
+0x00000001287e4b0a: jg L0017
+0x00000001287e4b10: movb $0x43,0x10(%rdi,%r9,1)
+0x00000001287e4b16: movb $0x32,0x11(%rdi,%r9,1)  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                                 ; - java.lang.String::getBytes@22 (line 2980)
+                                                 ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                                 ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                                 ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L000c: mov 0x28(%rsp),%r9
+0x00000001287e4b21: mov %r10d,0xc(%r9)  ;*invokevirtual append {reexecute=0 rethrow=0 return_oop=0}
+                                        ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4b25: test %r8d,%r8d
+0x00000001287e4b28: jne L0038
+0x00000001287e4b2e: mov 0x80(%r15),%rcx
+0x00000001287e4b35: mov %rcx,%r8
+0x00000001287e4b38: add $0x18,%r8
+0x00000001287e4b3c: cmp 0x90(%r15),%r8
+0x00000001287e4b43: jae L002c  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4b49: mov %r8,0x80(%r15)
+0x00000001287e4b50: prefetchw 0xc0(%r8)
+0x00000001287e4b58: mov $0xf80002cf,%r9d  ;   {metadata('java/lang/String')}
+0x00000001287e4b5e: movabs $0x0,%r8
+0x00000001287e4b68: lea (%r8,%r9,8),%r8
+0x00000001287e4b6c: mov 0xb0(%r8),%r8
+0x00000001287e4b73: mov %r8,(%rcx)
+0x00000001287e4b76: movl $0xf80002cf,0x8(%rcx)  ;   {metadata('java/lang/String')}
+0x00000001287e4b7d: mov %r12d,0xc(%rcx)
+0x00000001287e4b81: mov %r12,0x10(%rcx)  ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                         ; - java.lang.StringLatin1::newString@0 (line 549)
+                                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L000d: mov %rcx,0x8(%rsp)
+0x00000001287e4b8a: test %r10d,%r10d
+0x00000001287e4b8d: jl L003f  ;*ifge {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.util.Arrays::copyOfRange@5 (line 4027)
+                              ; - java.lang.StringLatin1::newString@9 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4b93: cmp $0x100000,%r10d
+0x00000001287e4b9a: ja L0030
+0x00000001287e4ba0: movslq %ebp,%r8
+0x00000001287e4ba3: add $0x2,%r8
+             L000e: mov %r10d,%r9d  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                    ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                    ; - java.lang.StringLatin1::newString@9 (line 549)
+                                    ; - java.lang.StringBuffer::toString@24 (line 678)
+                                    ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4baa: cmp %r9d,%r11d
+0x00000001287e4bad: mov %r9d,%ebp
+0x00000001287e4bb0: cmovl %r11d,%ebp  ;*invokestatic min {reexecute=0 rethrow=0 return_oop=0}
+                                      ; - java.util.Arrays::copyOfRange@54 (line 4031)
+                                      ; - java.lang.StringLatin1::newString@9 (line 549)
+                                      ; - java.lang.StringBuffer::toString@24 (line 678)
+                                      ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4bb4: cmp %ebp,%r11d
+0x00000001287e4bb7: jb L0037
+0x00000001287e4bbd: cmp %ebp,%r9d
+0x00000001287e4bc0: jb L0037  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.util.Arrays::copyOfRange@57 (line 4030)
+                              ; - java.lang.StringLatin1::newString@9 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4bc6: add $0x17,%r8
+0x00000001287e4bca: mov %r8,%rcx
+0x00000001287e4bcd: and $0xfffffffffffffff8,%rcx  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                                  ; - java.lang.StringLatin1::newString@9 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4bd1: cmp $0x100000,%r10d
+0x00000001287e4bd8: ja L002d
+0x00000001287e4bde: mov 0x80(%r15),%r14
+0x00000001287e4be5: mov %r14,%r11
+0x00000001287e4be8: add %rcx,%r11
+0x00000001287e4beb: cmp 0x90(%r15),%r11
+0x00000001287e4bf2: jae L002d  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4bf8: mov %r11,0x80(%r15)
+0x00000001287e4bff: prefetchw 0xc0(%r11)
+0x00000001287e4c07: movq $0x1,(%r14)
+0x00000001287e4c0e: prefetchw 0x100(%r11)
+0x00000001287e4c16: movl $0xf80000f2,0x8(%r14)  ;   {metadata({type array byte})}
+0x00000001287e4c1e: mov %r10d,0xc(%r14)
+0x00000001287e4c22: prefetchw 0x140(%r11)
+0x00000001287e4c2a: prefetchw 0x180(%r11)  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                           ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                           ; - java.lang.StringLatin1::newString@9 (line 549)
+                                           ; - java.lang.StringBuffer::toString@24 (line 678)
+                                           ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L000f: mov %r14,%r11
+0x00000001287e4c35: add $0x10,%r11
+0x00000001287e4c39: shr $0x3,%r8
+0x00000001287e4c3d: mov %r14,%r13
+0x00000001287e4c40: shr $0x3,%r13
+0x00000001287e4c44: mov 0x8(%rsp),%r9
+0x00000001287e4c49: mov %r9,%rbx
+0x00000001287e4c4c: shr $0x3,%rbx
+0x00000001287e4c50: test %ebp,%ebp
+0x00000001287e4c52: je L0031
+0x00000001287e4c58: mov 0x30(%rsp),%r9d
+0x00000001287e4c5d: lea 0x10(%r12,%r9,8),%r9
+0x00000001287e4c62: cmp %r10d,%ebp
+0x00000001287e4c65: jl L0022
+0x00000001287e4c6b: add $0xfffffffffffffff0,%rcx
+0x00000001287e4c6f: shr $0x3,%rcx
+0x00000001287e4c73: mov %r9,%rdi
+0x00000001287e4c76: mov %r11,%rsi
+0x00000001287e4c79: mov %rcx,%rdx
+0x00000001287e4c7c: vzeroupper
+0x00000001287e4c7f: movabs $0x120d46580,%r10
+0x00000001287e4c89: callq *%r10
+             L0010: movsbl 0x398(%r15),%r11d
+0x00000001287e4c94: test %r11d,%r11d
+0x00000001287e4c97: jne L0028
+             L0011: mov 0x8(%rsp),%r10
+0x00000001287e4ca2: mov %r13d,0xc(%r10)
+0x00000001287e4ca6: mov %r14,%r11
+0x00000001287e4ca9: xor %r10,%r11
+0x00000001287e4cac: shr $0x14,%r11
+0x00000001287e4cb0: test %r11,%r11
+0x00000001287e4cb3: je L0013
+0x00000001287e4cb5: shr $0x9,%r10
+0x00000001287e4cb9: movabs $0x10a016000,%rdi
+0x00000001287e4cc3: add %r10,%rdi
+0x00000001287e4cc6: movsbl (%rdi),%r11d
+0x00000001287e4cca: cmp $0x20,%r11d
+0x00000001287e4cce: je L0013
+0x00000001287e4cd0: mov 0x3e8(%r15),%r10
+0x00000001287e4cd7: mov 0x3d8(%r15),%r11
+0x00000001287e4cde: lock addl $0x0,-0x40(%rsp)
+0x00000001287e4ce4: movsbl (%rdi),%r8d
+0x00000001287e4ce8: test %r8d,%r8d
+0x00000001287e4ceb: je L0013
+0x00000001287e4ced: mov %r12b,(%rdi)
+0x00000001287e4cf0: test %r11,%r11
+0x00000001287e4cf3: jne L0012
+0x00000001287e4cf5: mov %r15,%rsi
+0x00000001287e4cf8: vzeroupper
+0x00000001287e4cfb: movabs $0x10bcb5d68,%r10
+0x00000001287e4d05: callq *%r10
+0x00000001287e4d08: jmp L0013
+             L0012: mov %rdi,-0x8(%r10,%r11,1)
+0x00000001287e4d0f: add $0xfffffffffffffff8,%r11
+0x00000001287e4d13: mov %r11,0x3d8(%r15)
+             L0013: mov 0x8(%rsp),%r10
+0x00000001287e4d1f: mov %r12b,0x14(%r10)
+0x00000001287e4d23: movsbl 0x398(%r15),%r10d
+0x00000001287e4d2b: test %r10d,%r10d
+0x00000001287e4d2e: jne L0029
+             L0014: mov 0x28(%rsp),%r10
+0x00000001287e4d39: mov %ebx,0x18(%r10)
+0x00000001287e4d3d: mov 0x8(%rsp),%r10
+0x00000001287e4d42: mov 0x28(%rsp),%r11
+0x00000001287e4d47: xor %r11,%r10
+0x00000001287e4d4a: shr $0x14,%r10
+0x00000001287e4d4e: test %r10,%r10
+0x00000001287e4d51: je L0016
+0x00000001287e4d53: shr $0x9,%r11
+0x00000001287e4d57: movabs $0x10a016000,%rdi
+0x00000001287e4d61: add %r11,%rdi
+0x00000001287e4d64: movsbl (%rdi),%r10d
+0x00000001287e4d68: cmp $0x20,%r10d
+0x00000001287e4d6c: je L0016
+0x00000001287e4d6e: mov 0x3d8(%r15),%r10
+0x00000001287e4d75: mov 0x3e8(%r15),%r11
+0x00000001287e4d7c: lock addl $0x0,-0x40(%rsp)
+0x00000001287e4d82: movsbl (%rdi),%r9d
+0x00000001287e4d86: test %r9d,%r9d
+0x00000001287e4d89: je L0016
+0x00000001287e4d8b: mov %r12b,(%rdi)
+0x00000001287e4d8e: test %r10,%r10
+0x00000001287e4d91: jne L0015  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4d93: mov %r15,%rsi
+0x00000001287e4d96: vzeroupper
+0x00000001287e4d99: movabs $0x10bcb5d68,%r10
+0x00000001287e4da3: callq *%r10
+0x00000001287e4da6: jmp L0016
+             L0015: mov %rdi,-0x8(%r11,%r10,1)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.StringBuffer::toString@43 (line 679)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4dad: add $0xfffffffffffffff8,%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4db1: mov %r10,0x3d8(%r15)  ;*invokevirtual toString {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0016: mov 0x8(%rsp),%rax
+0x00000001287e4dbd: vzeroupper
+0x00000001287e4dc0: add $0x50,%rsp
+0x00000001287e4dc4: pop %rbp
+0x00000001287e4dc5: mov 0x70(%r15),%r10
+0x00000001287e4dc9: test %eax,(%r10)  ;   {poll_return} *** SAFEPOINT POLL ***
+0x00000001287e4dcc: retq
+             L0017: movb $0x32,0x11(%rdi,%r9,1)
+0x00000001287e4dd3: movb $0x43,0x10(%rdi,%r9,1)
+0x00000001287e4dd9: jmpq L000c
+             L0018: movb $0x31,0x11(%r10,%r11,1)
+0x00000001287e4de4: movb $0x43,0x10(%r10,%r11,1)
+0x00000001287e4dea: jmpq L0009
+             L0019: mov 0x28(%rsp),%rbp  ;*synchronization entry
+                                         ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@-1 (line 144)
+                                         ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                         ; - java.lang.StringBuffer::append@7 (line 275)
+                                         ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4df4: add $0x2,%ebx  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                   ; - java.lang.AbstractStringBuilder::append@20 (line 512)
+                                   ; - java.lang.StringBuffer::append@7 (line 275)
+                                   ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4df7: mov %rbp,%rsi
+0x00000001287e4dfa: mov %ebx,%edx
+0x00000001287e4dfc: vzeroupper
+0x00000001287e4dff: callq 0x0000000120d37880  ; ImmutableOopMap{rbp=Oop [40]=Oop [48]=NarrowOop }
+                                              ;*invokespecial newCapacity {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@24 (line 147)
+                                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {optimized virtual_call}
+0x00000001287e4e04: movsbl 0x10(%rbp),%ecx
+0x00000001287e4e08: mov %eax,%edx
+0x00000001287e4e0a: shl %cl,%edx  ;*ishl {reexecute=0 rethrow=0 return_oop=0}
+                                  ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@31 (line 147)
+                                  ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                  ; - java.lang.StringBuffer::append@7 (line 275)
+                                  ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4e0c: mov 0x30(%rsp),%r10d
+0x00000001287e4e11: mov %r10,%rsi
+0x00000001287e4e14: shl $0x3,%rsi
+0x00000001287e4e18: vzeroupper
+0x00000001287e4e1b: callq 0x0000000120d37d80  ; ImmutableOopMap{rbp=Oop [40]=Oop }
+                                              ;*invokestatic copyOf {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@32 (line 146)
+                                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {static_call}
+0x00000001287e4e20: mov %rax,%rbx
+0x00000001287e4e23: movsbl 0x398(%r15),%r10d
+0x00000001287e4e2b: test %r10d,%r10d
+0x00000001287e4e2e: jne L002e
+             L001a: mov %rbx,%r8
+0x00000001287e4e37: mov %r8,%r11
+0x00000001287e4e3a: shr $0x3,%r11
+0x00000001287e4e3e: mov %r11d,0x30(%rsp)
+0x00000001287e4e43: mov %r11d,0x14(%rbp)
+0x00000001287e4e47: mov %rbp,%r10
+0x00000001287e4e4a: mov %r8,%r11
+0x00000001287e4e4d: xor %r10,%r11
+0x00000001287e4e50: shr $0x14,%r11
+0x00000001287e4e54: test %r11,%r11
+0x00000001287e4e57: je L0008
+0x00000001287e4e5d: test %r8,%r8
+0x00000001287e4e60: je L0008
+0x00000001287e4e66: shr $0x9,%r10
+0x00000001287e4e6a: movabs $0x10a016000,%rdi
+0x00000001287e4e74: add %r10,%rdi
+0x00000001287e4e77: movsbl (%rdi),%r10d
+0x00000001287e4e7b: cmp $0x20,%r10d
+0x00000001287e4e7f: je L0008
+0x00000001287e4e85: mov 0x3e8(%r15),%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.String::<init>@6 (line 3041)
+                                          ; - java.lang.StringLatin1::newString@13 (line 549)
+                                          ; - java.lang.StringBuffer::toString@24 (line 678)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4e8c: mov 0x3d8(%r15),%r11
+0x00000001287e4e93: lock addl $0x0,-0x40(%rsp)
+0x00000001287e4e99: movsbl (%rdi),%r9d
+0x00000001287e4e9d: test %r9d,%r9d
+0x00000001287e4ea0: je L001c
+0x00000001287e4ea2: mov %r12b,(%rdi)
+0x00000001287e4ea5: test %r11,%r11
+0x00000001287e4ea8: je L001b
+0x00000001287e4eaa: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                                ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                                ; - java.lang.StringBuffer::append@7 (line 275)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4eaf: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4eb3: mov %r11,0x3d8(%r15)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4eba: jmp L001c  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L001b: mov %r15,%rsi
+0x00000001287e4ebf: vzeroupper
+0x00000001287e4ec2: movabs $0x10bcb5d68,%r10
+0x00000001287e4ecc: callq *%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                 ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+             L001c: mov 0x14(%rbp),%r10d  ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::putStringAt@17 (line 1641)
+                                          ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e4ed3: mov %r10d,0x30(%rsp)
+0x00000001287e4ed8: jmpq L0008
+             L001d: mov %r10,%rbp  ;*synchronization entry
+                                   ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@-1 (line 144)
+                                   ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                   ; - java.lang.StringBuffer::append@7 (line 275)
+                                   ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ee0: add $0x4,%ebx  ;*iadd {reexecute=0 rethrow=0 return_oop=0}
+                                   ; - java.lang.AbstractStringBuilder::append@20 (line 512)
+                                   ; - java.lang.StringBuffer::append@7 (line 275)
+                                   ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ee3: mov %rbp,%rsi
+0x00000001287e4ee6: mov %ebx,%edx
+0x00000001287e4ee8: vzeroupper
+0x00000001287e4eeb: callq 0x0000000120d37880  ; ImmutableOopMap{rbp=Oop [40]=Oop [48]=NarrowOop }
+                                              ;*invokespecial newCapacity {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@24 (line 147)
+                                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+                                              ;   {optimized virtual_call}
+0x00000001287e4ef0: movsbl 0x10(%rbp),%ecx
+0x00000001287e4ef4: mov %eax,%edx
+0x00000001287e4ef6: shl %cl,%edx  ;*ishl {reexecute=0 rethrow=0 return_oop=0}
+                                  ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@31 (line 147)
+                                  ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                  ; - java.lang.StringBuffer::append@7 (line 275)
+                                  ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4ef8: mov 0x30(%rsp),%r11d
+0x00000001287e4efd: mov %r11,%rsi
+0x00000001287e4f00: shl $0x3,%rsi
+0x00000001287e4f04: vzeroupper
+0x00000001287e4f07: callq 0x0000000120d37d80  ; ImmutableOopMap{rbp=Oop [40]=Oop }
+                                              ;*invokestatic copyOf {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@32 (line 146)
+                                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+                                              ;   {static_call}
+0x00000001287e4f0c: mov %rax,%rbx
+0x00000001287e4f0f: movsbl 0x398(%r15),%r11d
+0x00000001287e4f17: test %r11d,%r11d
+0x00000001287e4f1a: jne L002f
+             L001e: mov %rbx,%r8
+0x00000001287e4f23: mov %r8,%r11
+0x00000001287e4f26: shr $0x3,%r11
+0x00000001287e4f2a: mov %r11d,0x30(%rsp)
+0x00000001287e4f2f: mov %r11d,0x14(%rbp)
+0x00000001287e4f33: mov %rbp,%r10
+0x00000001287e4f36: mov %r8,%r11
+0x00000001287e4f39: xor %r10,%r11
+0x00000001287e4f3c: shr $0x14,%r11
+0x00000001287e4f40: test %r11,%r11
+0x00000001287e4f43: je L0021
+0x00000001287e4f45: test %r8,%r8
+0x00000001287e4f48: je L0021
+0x00000001287e4f4a: shr $0x9,%r10
+0x00000001287e4f4e: movabs $0x10a016000,%rdi
+0x00000001287e4f58: add %r10,%rdi
+0x00000001287e4f5b: movsbl (%rdi),%r11d
+0x00000001287e4f5f: cmp $0x20,%r11d
+0x00000001287e4f63: je L0021
+0x00000001287e4f65: mov 0x3e8(%r15),%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.String::<init>@6 (line 3041)
+                                          ; - java.lang.StringLatin1::newString@13 (line 549)
+                                          ; - java.lang.StringBuffer::toString@24 (line 678)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4f6c: mov 0x3d8(%r15),%r11
+0x00000001287e4f73: lock addl $0x0,-0x40(%rsp)
+0x00000001287e4f79: movsbl (%rdi),%r8d
+0x00000001287e4f7d: test %r8d,%r8d
+0x00000001287e4f80: je L0020
+0x00000001287e4f82: mov %r12b,(%rdi)
+0x00000001287e4f85: test %r11,%r11
+0x00000001287e4f88: je L001f
+0x00000001287e4f8a: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                                ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                                ; - java.lang.StringBuffer::append@7 (line 275)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4f8f: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4f93: mov %r11,0x3d8(%r15)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4f9a: jmp L0020  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.String::<init>@6 (line 3041)
+                               ; - java.lang.StringLatin1::newString@13 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L001f: mov %r15,%rsi
+0x00000001287e4f9f: vzeroupper
+0x00000001287e4fa2: movabs $0x10bcb5d68,%r10
+0x00000001287e4fac: callq *%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                 ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L0020: mov 0x14(%rbp),%r10d  ;*getfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::putStringAt@17 (line 1641)
+                                          ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e4fb3: mov %r10d,0x30(%rsp)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L0021: mov 0x18(%rbp),%r8d  ;*getfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                         ; - java.lang.StringBuffer::toString@1 (line 676)
+                                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e4fbc: jmpq L000b
+             L0022: movslq %ebp,%rdx
+0x00000001287e4fc4: mov %rdx,%r10
+0x00000001287e4fc7: add $0x10,%r10
+0x00000001287e4fcb: mov %r10,%rcx
+0x00000001287e4fce: and $0xfffffffffffffff8,%rcx
+0x00000001287e4fd2: mov %r14,%rdi
+0x00000001287e4fd5: add %rcx,%rdi
+0x00000001287e4fd8: shr $0x3,%r10
+0x00000001287e4fdc: sub %r10,%r8
+0x00000001287e4fdf: mov %r8,%rcx
+0x00000001287e4fe2: xor %rax,%rax
+0x00000001287e4fe5: cmp $0x8,%rcx
+0x00000001287e4fe9: jg L0024
+0x00000001287e4feb: dec %rcx
+0x00000001287e4fee: js L0025
+             L0023: mov %rax,(%rdi,%rcx,8)
+0x00000001287e4ff4: dec %rcx
+0x00000001287e4ff7: jge L0023
+0x00000001287e4ff9: jmp L0025
+             L0024: shl $0x3,%rcx
+0x00000001287e4fff: rep rex
+             L0025: mov %r9,%rdi
+0x00000001287e5005: mov %r11,%rsi
+0x00000001287e5008: vzeroupper
+0x00000001287e500b: movabs $0x120d46100,%r10
+0x00000001287e5015: callq *%r10
+0x00000001287e5018: jmpq L0010
+             L0026: mov 0x18(%r11),%r10d
+0x00000001287e5021: test %r10d,%r10d
+0x00000001287e5024: je L0007
+0x00000001287e502a: mov 0x3a0(%r15),%r11
+0x00000001287e5031: mov %r10,%rdi
+0x00000001287e5034: shl $0x3,%rdi
+0x00000001287e5038: test %r11,%r11
+0x00000001287e503b: je L0039  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::<init>@6 (line 3041)
+                              ; - java.lang.StringLatin1::newString@13 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5041: mov 0x3b0(%r15),%r10
+0x00000001287e5048: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.StringBuffer::append@2 (line 274)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e504d: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5051: mov %r11,0x3a0(%r15)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.StringBuffer::append@2 (line 274)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e5058: jmpq L0007
+             L0027: mov 0x18(%r10),%r11d
+0x00000001287e5061: test %r11d,%r11d
+0x00000001287e5064: je L000a
+0x00000001287e506a: mov 0x3a0(%r15),%r10
+0x00000001287e5071: mov %r11,%rdi
+0x00000001287e5074: shl $0x3,%rdi
+0x00000001287e5078: test %r10,%r10
+0x00000001287e507b: je L003a  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::<init>@6 (line 3041)
+                              ; - java.lang.StringLatin1::newString@13 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5081: mov 0x3b0(%r15),%r11
+0x00000001287e5088: mov %rdi,-0x8(%r11,%r10,1)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.StringBuffer::append@2 (line 274)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e508d: add $0xfffffffffffffff8,%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5091: mov %r10,0x3a0(%r15)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.StringBuffer::append@2 (line 274)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5098: jmpq L000a
+             L0028: mov 0x8(%rsp),%r10
+0x00000001287e50a2: mov 0xc(%r10),%r11d
+0x00000001287e50a6: test %r11d,%r11d
+0x00000001287e50a9: je L0011
+0x00000001287e50af: mov 0x3a0(%r15),%r10
+0x00000001287e50b6: mov %r11,%rdi
+0x00000001287e50b9: shl $0x3,%rdi
+0x00000001287e50bd: test %r10,%r10
+0x00000001287e50c0: je L003b
+0x00000001287e50c6: mov 0x3b0(%r15),%r11
+0x00000001287e50cd: mov %rdi,-0x8(%r11,%r10,1)
+0x00000001287e50d2: add $0xfffffffffffffff8,%r10
+0x00000001287e50d6: mov %r10,0x3a0(%r15)
+0x00000001287e50dd: jmpq L0011
+             L0029: mov 0x28(%rsp),%r10
+0x00000001287e50e7: mov 0x18(%r10),%r10d
+0x00000001287e50eb: test %r10d,%r10d
+0x00000001287e50ee: je L0014
+0x00000001287e50f4: mov 0x3a0(%r15),%r11
+0x00000001287e50fb: mov %r10,%rdi
+0x00000001287e50fe: shl $0x3,%rdi
+0x00000001287e5102: test %r11,%r11
+0x00000001287e5105: je L003c  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::<init>@6 (line 3041)
+                              ; - java.lang.StringLatin1::newString@13 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e510b: mov 0x3b0(%r15),%r10
+0x00000001287e5112: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.StringBuffer::toString@43 (line 679)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5117: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e511b: mov %r11,0x3a0(%r15)  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.StringBuffer::toString@43 (line 679)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5122: jmpq L0014  ;*invokespecial <init> {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.lang.AbstractStringBuilder::<init>@1 (line 81)
+                                ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+             L002a: movabs $0x7c0000790,%rsi  ;   {metadata({type array byte})}
+0x00000001287e5131: mov $0x10,%edx
+0x00000001287e5136: mov 0x28(%rsp),%rbp
+0x00000001287e513b: nop
+0x00000001287e513c: vzeroupper
+0x00000001287e513f: callq 0x0000000120e02500  ; ImmutableOopMap{rbp=Oop [40]=Oop }
+                                              ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - java.lang.AbstractStringBuilder::<init>@12 (line 83)
+                                              ; - java.lang.StringBuffer::<init>@3 (line 118)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+                                              ;   {runtime_call _new_array_Java}
+0x00000001287e5144: jmpq L0001
+             L002b: movabs $0x7c000dd60,%rsi  ;   {metadata('java/lang/StringBuffer')}
+0x00000001287e5153: nop
+0x00000001287e5154: vzeroupper
+0x00000001287e5157: callq 0x0000000120e02300  ; ImmutableOopMap{}
+                                              ;*new {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@0 (line 12)
+                                              ;   {runtime_call _new_instance_Java}
+0x00000001287e515c: jmpq L0000
+             L002c: mov %rdi,0x20(%rsp)
+0x00000001287e5166: mov %r11d,0x18(%rsp)
+0x00000001287e516b: mov %r10d,0xc(%rsp)
+0x00000001287e5170: mov %r9,(%rsp)
+0x00000001287e5174: movabs $0x7c0001678,%rsi  ;   {metadata('java/lang/String')}
+0x00000001287e517e: xchg %ax,%ax
+0x00000001287e5180: vzeroupper
+0x00000001287e5183: callq 0x0000000120e02300  ; ImmutableOopMap{[0]=Oop [32]=Oop [40]=Oop [48]=NarrowOop }
+                                              ;*new {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - java.lang.StringLatin1::newString@0 (line 549)
+                                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                              ;   {runtime_call _new_instance_Java}
+0x00000001287e5188: mov 0xc(%rsp),%r10d
+0x00000001287e518d: mov 0x18(%rsp),%r11d
+0x00000001287e5192: mov 0x20(%rsp),%rdi
+0x00000001287e5197: mov %rax,%rcx
+0x00000001287e519a: jmpq L000d
+             L002d: mov %rdi,0x38(%rsp)
+0x00000001287e51a4: mov %rcx,0x20(%rsp)
+0x00000001287e51a9: mov %r8,0x18(%rsp)
+0x00000001287e51ae: rex
+0x00000001287e51b3: rex
+0x00000001287e51b8: mov %r10d,0xc(%rsp)
+0x00000001287e51bd: mov 0x30(%rsp),%r10d
+0x00000001287e51c2: mov %r10d,0x8(%rsp)
+0x00000001287e51c7: mov 0x28(%rsp),%r10
+0x00000001287e51cc: mov %r10,(%rsp)
+0x00000001287e51d0: movabs $0x7c0000790,%rsi  ;   {metadata({type array byte})}
+0x00000001287e51da: mov 0xc(%rsp),%edx
+0x00000001287e51de: xchg %ax,%ax
+0x00000001287e51e0: vzeroupper
+0x00000001287e51e3: callq 0x0000000120e02700  ; ImmutableOopMap{[0]=Oop [8]=NarrowOop [16]=Oop [40]=Oop [56]=Oop }
+                                              ;*newarray {reexecute=0 rethrow=0 return_oop=1}
+                                              ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                              ; - java.lang.StringLatin1::newString@9 (line 549)
+                                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                              ;   {runtime_call _new_array_nozero_Java}
+0x00000001287e51e8: mov 0x8(%rsp),%r8d
+0x00000001287e51ed: mov %r8d,0x30(%rsp)
+0x00000001287e51f2: mov 0xc(%rsp),%r10d
+0x00000001287e51f7: mov 0x10(%rsp),%r9
+0x00000001287e51fc: mov 0x18(%rsp),%r8
+0x00000001287e5201: mov 0x20(%rsp),%rcx
+0x00000001287e5206: mov %rax,%r14
+0x00000001287e5209: mov 0x38(%rsp),%rdi
+0x00000001287e520e: mov %r9,0x8(%rsp)
+0x00000001287e5213: jmpq L000f
+             L002e: mov 0x14(%rbp),%r10d
+0x00000001287e521c: test %r10d,%r10d
+0x00000001287e521f: je L001a
+0x00000001287e5225: mov 0x3a0(%r15),%r11
+0x00000001287e522c: mov %r10,%rdi
+0x00000001287e522f: shl $0x3,%rdi
+0x00000001287e5233: test %r11,%r11
+0x00000001287e5236: je L0040  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::<init>@6 (line 3041)
+                              ; - java.lang.StringLatin1::newString@13 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e523c: mov 0x3b0(%r15),%r10
+0x00000001287e5243: mov %rdi,-0x8(%r10,%r11,1)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                                ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                                ; - java.lang.StringBuffer::append@7 (line 275)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e5248: add $0xfffffffffffffff8,%r11  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e524c: mov %r11,0x3a0(%r15)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e5253: jmpq L001a
+             L002f: mov 0x14(%rbp),%r11d
+0x00000001287e525c: test %r11d,%r11d
+0x00000001287e525f: je L001e
+0x00000001287e5265: mov 0x3a0(%r15),%r10
+0x00000001287e526c: mov %r11,%rdi
+0x00000001287e526f: shl $0x3,%rdi
+0x00000001287e5273: test %r10,%r10
+0x00000001287e5276: je L0041  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                              ; - java.lang.String::<init>@6 (line 3041)
+                              ; - java.lang.StringLatin1::newString@13 (line 549)
+                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e527c: mov 0x3b0(%r15),%r11
+0x00000001287e5283: mov %rdi,-0x8(%r11,%r10,1)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                                ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                                ; - java.lang.StringBuffer::append@7 (line 275)
+                                                ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5288: add $0xfffffffffffffff8,%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                                  ; - java.lang.String::<init>@6 (line 3041)
+                                                  ; - java.lang.StringLatin1::newString@13 (line 549)
+                                                  ; - java.lang.StringBuffer::toString@24 (line 678)
+                                                  ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e528c: mov %r10,0x3a0(%r15)  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                          ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                          ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                          ; - java.lang.StringBuffer::append@7 (line 275)
+                                          ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5293: jmpq L001e
+             L0030: movslq %r10d,%r8  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                                      ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                      ; - java.lang.StringLatin1::newString@9 (line 549)
+                                      ; - java.lang.StringBuffer::toString@24 (line 678)
+                                      ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e529b: jmpq L000e
+             L0031: add $0xfffffffffffffffe,%r8
+0x00000001287e52a4: mov %r8,%rcx
+0x00000001287e52a7: mov %r11,%rdi
+0x00000001287e52aa: xor %rax,%rax
+0x00000001287e52ad: cmp $0x8,%rcx
+0x00000001287e52b1: jg L0033
+0x00000001287e52b3: dec %rcx
+0x00000001287e52b6: js L0034
+             L0032: mov %rax,(%rdi,%rcx,8)
+0x00000001287e52bc: dec %rcx
+0x00000001287e52bf: jge L0032
+0x00000001287e52c1: jmp L0034
+             L0033: shl $0x3,%rcx
+0x00000001287e52c7: rep rex
+             L0034: jmpq L0010
+             L0035: mov $0xffffffcc,%esi
+0x00000001287e52d4: mov 0x28(%rsp),%rbp
+0x00000001287e52d9: mov %ebx,0x1c(%rsp)
+0x00000001287e52dd: data32 xchg %ax,%ax
+0x00000001287e52e0: vzeroupper
+0x00000001287e52e3: callq 0x0000000120d39280  ; ImmutableOopMap{rbp=Oop [48]=NarrowOop }
+                                              ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.String::getBytes@22 (line 2980)
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e52e8: ud2
+             L0036: mov $0xffffffcc,%esi
+0x00000001287e52ef: mov 0x28(%rsp),%r10
+0x00000001287e52f4: mov %r10,0x8(%rsp)
+0x00000001287e52f9: mov %r10,0x10(%rsp)
+0x00000001287e52fe: xchg %ax,%ax
+0x00000001287e5300: vzeroupper
+0x00000001287e5303: callq 0x0000000120d39280  ; ImmutableOopMap{[8]=Oop [16]=Oop [48]=NarrowOop }
+                                              ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.String::getBytes@22 (line 2980)
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e5308: ud2  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                         ; - java.util.Arrays::copyOfRange@57 (line 4030)
+                         ; - java.lang.StringLatin1::newString@9 (line 549)
+                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0037: mov $0xffffffcc,%esi
+0x00000001287e530f: mov 0x28(%rsp),%rbp
+0x00000001287e5314: mov %r10d,0x20(%rsp)
+0x00000001287e5319: data32 xchg %ax,%ax
+0x00000001287e531c: vzeroupper
+0x00000001287e531f: callq 0x0000000120d39280  ; ImmutableOopMap{rbp=Oop [8]=Oop [48]=NarrowOop }
+                                              ;*newarray {reexecute=1 rethrow=0 return_oop=0}
+                                              ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                                              ; - java.lang.StringLatin1::newString@9 (line 549)
+                                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e5324: ud2  ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                         ; - java.util.Arrays::copyOfRange@57 (line 4030)
+                         ; - java.lang.StringLatin1::newString@9 (line 549)
+                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0038: mov $0xffffff55,%esi
+0x00000001287e532b: mov %r8d,(%rsp)
+0x00000001287e532f: mov %r9,0x8(%rsp)
+0x00000001287e5334: vzeroupper
+0x00000001287e5337: callq 0x0000000120d39280  ; ImmutableOopMap{[0]=NarrowOop [8]=Oop [40]=Oop }
+                                              ;*ifnonnull {reexecute=1 rethrow=0 return_oop=0}
+                                              ; - java.lang.StringBuffer::toString@4 (line 676)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e533c: ud2  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                         ; - java.lang.String::<init>@6 (line 3041)
+                         ; - java.lang.StringLatin1::newString@13 (line 549)
+                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0039: mov %r15,%rsi
+0x00000001287e5341: vzeroupper
+0x00000001287e5344: movabs $0x10bcb5d3e,%r10
+0x00000001287e534e: callq *%r10  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.StringBuffer::append@2 (line 274)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e5351: jmpq L0007  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.lang.String::<init>@6 (line 3041)
+                                ; - java.lang.StringLatin1::newString@13 (line 549)
+                                ; - java.lang.StringBuffer::toString@24 (line 678)
+                                ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L003a: mov %r15,%rsi
+0x00000001287e5359: vzeroupper
+0x00000001287e535c: movabs $0x10bcb5d3e,%r10
+0x00000001287e5366: callq *%r10  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.StringBuffer::append@2 (line 274)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5369: jmpq L000a
+             L003b: mov %r15,%rsi
+0x00000001287e5371: vzeroupper
+0x00000001287e5374: movabs $0x10bcb5d3e,%r10
+0x00000001287e537e: callq *%r10
+0x00000001287e5381: jmpq L0011  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.lang.String::<init>@6 (line 3041)
+                                ; - java.lang.StringLatin1::newString@13 (line 549)
+                                ; - java.lang.StringBuffer::toString@24 (line 678)
+                                ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L003c: mov %r15,%rsi
+0x00000001287e5389: vzeroupper
+0x00000001287e538c: movabs $0x10bcb5d3e,%r10
+0x00000001287e5396: callq *%r10  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.StringBuffer::toString@43 (line 679)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5399: jmpq L0014  ;*invokevirtual coder {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.lang.AbstractStringBuilder::putStringAt@5 (line 1638)
+                                ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                ; - java.lang.StringBuffer::append@7 (line 275)
+                                ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+             L003d: mov $0xffffff55,%esi
+0x00000001287e53a3: mov %r10,0x8(%rsp)
+0x00000001287e53a8: mov %r10,0x10(%rsp)
+0x00000001287e53ad: mov %ebx,0x28(%rsp)
+0x00000001287e53b1: data32 xchg %ax,%ax
+0x00000001287e53b4: vzeroupper
+0x00000001287e53b7: callq 0x0000000120d39280  ; ImmutableOopMap{[8]=Oop [16]=Oop }
+                                              ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@8 (line 1638)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e53bc: ud2  ;*invokevirtual coder {reexecute=0 rethrow=0 return_oop=0}
+                         ; - java.lang.AbstractStringBuilder::putStringAt@5 (line 1638)
+                         ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                         ; - java.lang.StringBuffer::append@7 (line 275)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L003e: mov $0xffffff55,%esi
+0x00000001287e53c3: mov %r10,0x8(%rsp)
+0x00000001287e53c8: mov %r10,0x10(%rsp)
+0x00000001287e53cd: mov %r11d,0x28(%rsp)
+0x00000001287e53d2: xchg %ax,%ax
+0x00000001287e53d4: vzeroupper
+0x00000001287e53d7: callq 0x0000000120d39280  ; ImmutableOopMap{[8]=Oop [16]=Oop }
+                                              ;*if_icmpeq {reexecute=1 rethrow=0 return_oop=0}
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@8 (line 1638)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e53dc: ud2  ;*synchronization entry
+                         ; - java.util.Arrays::copyOfRange@-1 (line 4026)
+                         ; - java.lang.StringLatin1::newString@9 (line 549)
+                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L003f: mov $0xffffff55,%esi
+0x00000001287e53e3: mov 0x28(%rsp),%rbp
+0x00000001287e53e8: mov %r10d,0x20(%rsp)
+0x00000001287e53ed: mov %r10d,0x24(%rsp)
+0x00000001287e53f2: xchg %ax,%ax
+0x00000001287e53f4: vzeroupper
+0x00000001287e53f7: callq 0x0000000120d39280  ; ImmutableOopMap{rbp=Oop [8]=Oop [48]=NarrowOop }
+                                              ;*ifge {reexecute=1 rethrow=0 return_oop=0}
+                                              ; - java.util.Arrays::copyOfRange@5 (line 4027)
+                                              ; - java.lang.StringLatin1::newString@9 (line 549)
+                                              ; - java.lang.StringBuffer::toString@24 (line 678)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e53fc: ud2  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                         ; - java.lang.String::<init>@6 (line 3041)
+                         ; - java.lang.StringLatin1::newString@13 (line 549)
+                         ; - java.lang.StringBuffer::toString@24 (line 678)
+                         ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0040: mov %r15,%rsi
+0x00000001287e5401: vzeroupper
+0x00000001287e5404: movabs $0x10bcb5d3e,%r10
+0x00000001287e540e: callq *%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                 ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e5411: jmpq L001a  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                ; - java.lang.String::<init>@6 (line 3041)
+                                ; - java.lang.StringLatin1::newString@13 (line 549)
+                                ; - java.lang.StringBuffer::toString@24 (line 678)
+                                ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+             L0041: mov %r15,%rsi
+0x00000001287e5419: vzeroupper
+0x00000001287e541c: movabs $0x10bcb5d3e,%r10
+0x00000001287e5426: callq *%r10  ;*putfield value {reexecute=0 rethrow=0 return_oop=0}
+                                 ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@35 (line 146)
+                                 ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                 ; - java.lang.StringBuffer::append@7 (line 275)
+                                 ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5429: jmpq L001e
+0x00000001287e542e: mov $0xfffffff6,%esi
+0x00000001287e5433: mov 0x28(%rsp),%rbp
+0x00000001287e5438: vzeroupper
+0x00000001287e543b: callq 0x0000000120d39280  ; ImmutableOopMap{rbp=Oop }
+                                              ;*arraylength {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@4 (line 144)
+                                              ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e5440: ud2
+0x00000001287e5442: mov $0xfffffff6,%esi
+0x00000001287e5447: mov 0x28(%rsp),%rbp
+0x00000001287e544c: mov %ebx,(%rsp)
+0x00000001287e544f: nop
+0x00000001287e5450: vzeroupper
+0x00000001287e5453: callq 0x0000000120d39280  ; ImmutableOopMap{rbp=Oop }
+                                              ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.String::getBytes@22 (line 2980)
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e5458: ud2
+0x00000001287e545a: mov $0xfffffff6,%esi
+0x00000001287e545f: nop
+0x00000001287e5460: vzeroupper
+0x00000001287e5463: callq 0x0000000120d39280  ; ImmutableOopMap{[40]=Oop }
+                                              ;*invokestatic arraycopy {reexecute=0 rethrow=0 return_oop=0}
+                                              ; - java.lang.String::getBytes@22 (line 2980)
+                                              ; - java.lang.AbstractStringBuilder::putStringAt@25 (line 1641)
+                                              ; - java.lang.AbstractStringBuilder::append@30 (line 513)
+                                              ; - java.lang.StringBuffer::append@7 (line 275)
+                                              ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+                                              ;   {runtime_call UncommonTrapBlob}
+0x00000001287e5468: ud2  ;*new {reexecute=0 rethrow=0 return_oop=0}
+                         ; - pbouda.jitwatch.examples.LockElision::sync@0 (line 12)
+0x00000001287e546a: mov %rax,%rsi
+0x00000001287e546d: jmp L0045  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::<init>@12 (line 83)
+                               ; - java.lang.StringBuffer::<init>@3 (line 118)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@4 (line 12)
+0x00000001287e546f: mov %rax,%rsi
+0x00000001287e5472: jmp L0045  ;*newarray {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.util.Arrays::copyOfRange@40 (line 4029)
+                               ; - java.lang.StringLatin1::newString@9 (line 549)
+                               ; - java.lang.StringBuffer::toString@24 (line 678)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+0x00000001287e5474: jmp L0042  ;*synchronization entry
+                               ; - pbouda.jitwatch.examples.LockElision::sync@-1 (line 12)
+             L0042: mov %rax,%rsi
+0x00000001287e5479: jmp L0045  ;*invokespecial newCapacity {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@24 (line 147)
+                               ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+0x00000001287e547b: jmp L0043  ;*invokestatic copyOf {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@32 (line 146)
+                               ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@11 (line 13)
+             L0043: mov %rax,%rsi
+0x00000001287e5480: jmp L0045  ;*invokespecial newCapacity {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@24 (line 147)
+                               ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+0x00000001287e5482: jmp L0044  ;*invokestatic copyOf {reexecute=0 rethrow=0 return_oop=0}
+                               ; - java.lang.AbstractStringBuilder::ensureCapacityInternal@32 (line 146)
+                               ; - java.lang.AbstractStringBuilder::append@21 (line 512)
+                               ; - java.lang.StringBuffer::append@7 (line 275)
+                               ; - pbouda.jitwatch.examples.LockElision::sync@18 (line 14)
+             L0044: mov %rax,%rsi  ;*new {reexecute=0 rethrow=0 return_oop=0}
+                                   ; - pbouda.jitwatch.examples.LockElision::sync@0 (line 12)
+             L0045: vzeroupper
+0x00000001287e548a: add $0x50,%rsp
+0x00000001287e548e: pop %rbp
+0x00000001287e548f: jmpq 0x0000000120e03d00  ;*putfield toStringCache {reexecute=0 rethrow=0 return_oop=0}
+                                             ; - java.lang.StringBuffer::toString@43 (line 679)
+                                             ; - pbouda.jitwatch.examples.LockElision::sync@23 (line 15)
+                                             ;   {runtime_call _rethrow_Java}
+0x00000001287e5494: hlt
+0x00000001287e5495: hlt
+0x00000001287e5496: hlt
+0x00000001287e5497: hlt
+0x00000001287e5498: hlt
+0x00000001287e5499: hlt
+0x00000001287e549a: hlt
+0x00000001287e549b: hlt
+0x00000001287e549c: hlt
+0x00000001287e549d: hlt
+0x00000001287e549e: hlt
+0x00000001287e549f: hlt
+[Stub Code]
+0x00000001287e54a0: movabs $0x0,%rbx  ;   {no_reloc}
+             L0046: jmpq L0046  ;   {runtime_call}
+0x00000001287e54af: movabs $0x0,%rbx  ;   {static_stub}
+             L0047: jmpq L0047  ;   {runtime_call}
+0x00000001287e54be: movabs $0x0,%rbx  ;   {static_stub}
+             L0048: jmpq L0048  ;   {runtime_call}
+0x00000001287e54cd: movabs $0x0,%rbx  ;   {static_stub}
+             L0049: jmpq L0049  ;   {runtime_call}
+[Exception Handler]
+0x00000001287e54dc: jmpq 0x0000000120d6ce00  ;   {runtime_call ExceptionBlob}
+[Deopt Handler Code]
+0x00000001287e54e1: callq 0x00000001287e54e6
+0x00000001287e54e6: subq $0x5,(%rsp)
+0x00000001287e54eb: jmpq 0x0000000120d38ea0  ;   {runtime_call DeoptimizationBlob}ImmutableOopMap{rbp=Oop [40]=Oop [48]=NarrowOop }pc offsets: 1412

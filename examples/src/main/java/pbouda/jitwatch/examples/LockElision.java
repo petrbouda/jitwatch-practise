@@ -8,15 +8,10 @@ public class LockElision {
         }
     }
 
-    private static void sync() {
-        synchronized (LockElision.class) {
-            System.out.println();
-        }
-        synchronized (LockElision.class) {
-            System.out.println();
-        }
-        synchronized (LockElision.class) {
-            System.out.println();
-        }
+    private static String sync() {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("C1");
+        buffer.append("C2");
+        return buffer.toString();
     }
 }
