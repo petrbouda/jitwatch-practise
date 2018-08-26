@@ -18,7 +18,7 @@
 | n | Native wrapper | Native method is used |
 - `compilation_level` - On which compilation level is the going to be compiled
 - `method_name` - Name of a class and a particular method
-- `size` - Size of the original method, not the compiled one, because task has not been even done yet.
+- `size` - Compiled bytecode size
 
 ```
 java -classpath examples/target/classes \

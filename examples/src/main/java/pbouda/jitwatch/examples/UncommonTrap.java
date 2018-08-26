@@ -2,14 +2,25 @@ package pbouda.jitwatch.examples;
 
 public class UncommonTrap {
 
-    public static void main(String[] args) throws InterruptedException {
+    /**
+     * 1. Only Compilation
+     * 2. With FALSE to be caught in uncommon trap
+     * 3. Is there any way how to see that the code is interpreted again?
+     */
+    public static void main(String[] args) {
         int sum = 0;
         for (int i = 0; i < 20_000; i++) {
             sum += hotMethod(true);
         }
 
-        Thread.sleep(2000);
-        System.out.println(sum);
+        measuredHotMethod(true);
+        measuredHotMethod(false);
+    }
+
+    private static void measuredHotMethod(boolean bool) {
+        long start = System.nanoTime();
+        hotMethod(bool);
+        System.out.println(System.nanoTime() - start);
     }
 
     private static int hotMethod(boolean bool) {

@@ -42,6 +42,10 @@ Could not load hsdis-amd64.dylib; library not loadable; PrintAssembly is disable
 - New JVM Logging tags - `-Xlog:jit\*,compilation\*,codecache\*=trace`
 - All available tags - `java -Xlog:help`
 
+```
+java -XX:LogFile=<path to file> ...
+```
+
 ```bash
 java -classpath examples/target/classes \
     -XX:-TieredCompilation \
@@ -116,6 +120,8 @@ export nocompressedoops="-XX:-UseCompressedOops"
 - Optimization Locks
 - Null Sanity Check
 - Devirtualization (Megamorphic calls)
+    - Interfaces
+    - Classes (Class hierarchy)
 - Loop Unrolling
 - Biased Locking
 - Inlining
