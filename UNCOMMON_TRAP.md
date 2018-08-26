@@ -51,8 +51,7 @@ java -classpath examples/target/classes -XX:-TieredCompilation -XX:+UnlockDiagno
     104    6 %           pbouda.jitwatch.examples.UncommonTrap::main @ 36 (57 bytes)   made not entrant
 ```
 
-
-Results:
+*Results*:
 - we can see the price we need to pay when the assumption is not correct and must be deoptimized
 
 ```
