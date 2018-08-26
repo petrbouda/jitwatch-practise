@@ -60,5 +60,4 @@ true - 3661 ns
 false - 31968 ns
 ```
 
-![Uncommon Trap]
-(https://github.com/petrbouda/jitwatch-practise/blob/master/images/uncommontrap-1.png)
+[Uncommon Trap](https://github.com/petrbouda/jitwatch-practise/blob/master/images/uncommontrap-1.png)
